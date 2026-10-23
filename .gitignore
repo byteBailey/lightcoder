@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual env / tooling
+.venv/
+uv.lock
+
+# Secrets & local config
+.env
+
+# Run outputs (kept out of git; summaries go in docs/). `results/*` rather than `results/`:
+# git never looks inside an ignored directory, so the .gitkeep exception would not apply.
+results/*
+!results/.gitkeep
+
+# OS
+.DS_Store
