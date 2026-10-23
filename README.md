@@ -59,11 +59,13 @@ switches between them in the REPL. Behaviour defaults such as `permission_mode` 
 `.lightcoder/settings.json`. For a one-off run, `LIGHTCODER_MODEL`, `LIGHTCODER_BASE_URL` and
 `LIGHTCODER_API_KEY` in the shell take precedence over both files.
 
-Then run it **inside any project, with that project's environment activated** — the agent's
-shell inherits your env, so it uses the project's interpreter and deps (exactly like Claude
-Code / nanocoder / Codex CLI):
+Then run it **inside any project**. LightCoder itself needs no environment, but the agent's
+shell inherits yours, so activate the project's environment first if the agent should run its
+code or tests with the project's interpreter and deps (exactly like Claude Code / nanocoder /
+Codex CLI):
 
 ```bash
+# Optional: lets the agent's shell commands use the project's Python and deps.
 conda activate myproject        # or: source .venv/bin/activate
 cd ~/myproject
 lightcoder                      # inline REPL: streaming + markdown, output stays in your terminal
